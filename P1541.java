@@ -17,7 +17,7 @@ public class P1541 {
 		for (int i = 0; i < B.length; i++) {
 			if (i == 0) {
 				if (B[i].contains("+")) {
-					String[] C = B[i].split("+");
+					String[] C = B[i].split("\\+");
 					for(String j:C)
 						sum += Integer.parseInt(j);
 				}else
