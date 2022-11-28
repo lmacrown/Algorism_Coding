@@ -1,4 +1,4 @@
-package algorism_study;
+package algorism2;
 
 import java.util.Scanner;
 
@@ -17,13 +17,16 @@ public class P1541 {
 		for (int i = 0; i < B.length; i++) {
 			if (i == 0) {
 				if (B[i].contains("+")) {
-					String[] C = B[i].split("\\+");
-					sum += Integer.parseInt(C[i]);
-				}
+					String[] C = B[i].split("+");
+					for(String j:C)
+						sum += Integer.parseInt(j);
+				}else
+					sum+=Integer.parseInt(B[0]);
 			} else {
 				if (B[i].contains("+")) {
 					String[] C = B[i].split("\\+");
-					sum -= Integer.parseInt(C[i]);
+					for(String j : C)
+						sum -= Integer.parseInt(j);
 				}
 			}
 		}
